@@ -1,26 +1,47 @@
-package exercise;
-class Animal{
-	 public void makeSound() {
-		 System.out.println("different animals makes different sound");
-	 }
+package newExercise;
+interface Playable{
+	void play();
+}
+class FootBall implements Playable{
 
-}
-class CatClass  extends Animal{
 	@Override
-  public void makeSound() {
-	 System.out.println("bark");
- }
+	public void play() {
+		System.out.println("play football");
+		
+	}
+	
 }
-public class MainClass {
+class VolleyBall implements Playable{
+
+	@Override
+	public void play() {
+		System.out.println("play Volleyball");
+		
+	}
+	
+}
+class BasketBall implements Playable{
+
+	@Override
+	public void play() {
+		System.out.println("play basketball");
+		
+	}
+	
+}
+
+
+	public class MainClass {
 
 	public static void main(String[] args) {
-		
-		// TODO Auto-generated method stub
-		CatClass obj = new CatClass();
-		 obj.makeSound();
-		 
+		FootBall obj1 = new FootBall();
+		obj1.play();
+		VolleyBall obj2 = new VolleyBall();
+		obj2.play();
+		BasketBall obj3 = new BasketBall();
+		obj3.play();
+	// TODO Auto-generated method stub
 
 	}
-
 
 }
